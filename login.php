@@ -29,6 +29,7 @@ if (isset($_POST['login'])) {
 			// @param 6: domain not valid on SSL
 			// @param 7: http only, javascript cant access cookie
 			setcookie("SNID", $token, time() + 60 * 60 * 24 * 7, '/', NULL, NULL, TRUE);
+			setcookie("SNID_", '1', time() + 60 * 60 * 24 * 3, '/', NULL, NULL, TRUE);
 		} else{
 			echo "Incorrect password";
 		}

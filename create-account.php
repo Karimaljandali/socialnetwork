@@ -1,5 +1,6 @@
 <?php 
 include('classes/DB.php');
+include('./includes/header.php');
 
 
 if (isset($_POST['createaccount'])) {
@@ -51,11 +52,22 @@ if (isset($_POST['createaccount'])) {
 
 
 ?>
+<body>
+	<div class="container">
+		<div class="form-container">
+			<div class="left-side">
+				<h1>Register</h1>
+				<form action="create-account.php" method="post">
+					<input type="text" name="username" value="" placeholder="Username">
+					<input type="password" name="password" value="" placeholder="Password">
+					<input type="email" name="email" value="" placeholder="email">
+					<input type="submit" name="createaccount" value="Create Account">
+				</form>
+			</div>
+			<div>
+				<img class="right-side" src="./imgs/register-img.jpg" alt="Register Account Img">
+			</div>
+		</div>
 
-<h1>Resiger</h1>
-<form action="create-account.php" method="post">
-	<input type="text" name="username" value="" placeholder="Username">
-	<input type="password" name="password" value="" placeholder="Password">
-	<input type="email" name="email" value="" placeholder="email">
-	<input type="submit" name="createaccount" value="Create Account">
-</form>
+	</div>
+</body>

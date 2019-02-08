@@ -1,5 +1,6 @@
 <?php 
 include('classes/DB.php');
+include('./includes/header.php');
 
 if (isset($_POST['login'])) {
 	$username = $_POST['username'];
@@ -39,10 +40,18 @@ if (isset($_POST['login'])) {
 	}
 }
 ?>
+<body>
+	<main>
+		<header>
+			<div id="logo"><img src="imgs/logo.png" alt=""></div>
+			<div class="nav-form">
+				<form action="login.php" method="post">
+					<input type="text" name="username" value=""	placeholder="Username">
+					<input type="password" name="password" value=""	placeholder="Password">
+					<input type="submit" name="login" value="login">
+				</form>
+			</div>
+		</header>
+	</main>
 
-<h1>Login to your account</h1>
-<form action="login.php" method="post">
-	<input type="text" name="username" value=""	placeholder="Username">
-	<input type="password" name="password" value=""	placeholder="Password">
-	<input type="submit" name="login" value="login">
-</form>
+</body>

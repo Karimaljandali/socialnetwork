@@ -1,6 +1,7 @@
 <?php 
 include('./classes/DB.php');
 include('./classes/Login.php');
+include('./includes/header.php');
 
 if (!Login::isLoggedIn()) {
 	die('Not logged in.');
